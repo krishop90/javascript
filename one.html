@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doing javascript test</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li> java script</li>
+
+    </ul>
+</body>
+<script>
+
+    function addLanguage(langname) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("java")
+    addLanguage("typescript")
+
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('python')
+    addOptiLanguage('brolang')
+
+    // EDIT
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML = "krish"
+
+    // Second Approch
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "krunal"
+    secondLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.innerHTML = "krish"
+
+
+    //REMOVE 
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove();
+
+
+</script>
+
+</html>
